@@ -1,0 +1,96 @@
+.mainHeader
+
+.mainLogo
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+    &__icon
+        max-width: 100%
+        width: 60px
+        height: auto
+        margin-right: 20px
+    &__text
+        font-family: $ff-montserratBold
+        font-size: 20px
+        color: $color-purple
+        text-transform: uppercase
+
+.mainHeader-nav
+    margin: 8px 0
+    display: flex
+    justify-content: space-between
+    &-mobContainer
+        display: flex
+        justify-content: flex-start
+    &-menuContainer
+        display: flex
+        justify-content: flex-end
+        &__ul
+            display: flex
+            flex-direction: row
+            align-items: center
+            list-style: none
+            margin-bottom: 0
+            padding-left: 0
+        &__li
+        &__a
+            display: block
+            font-family: $ff-asapRegular
+            font-size: 26px
+            color: $color-purple
+            padding: 15px 
+            position: relative
+            &:hover,
+            &:active,
+            &focus
+                text-decoration: none
+                color: $color-pink
+            
+
+
+
+
+
+.sub-menu
+    display: none
+    position: absolute
+
+
++media-breakpoint-down($lg)
+    .mainHeader-nav
+        margin: 0
+    .mainHeader-nav-mobContainer
+        display: flex
+        width: 100%
+        justify-content: space-between
+    .mainHeader-nav-mobContainer__a
+        display: flex
+        justify-content: flex-start
+    .mainHeader-nav-mobContainer__btn
+        display: flex
+        justify-content: flex-end
+    .navbar-toggler
+        display: block
+        height: 50px 
+        margin: auto
+        
+    .mainHeader-nav-menuContainer__ul 
+        margin-top: 10px
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        border-radius: 10px
+        border-radius: $borderRadius-main
+        box-shadow: $boxShadow-main
+        background-color: $color-whiteLight
+    .mainHeader-nav-menuContainer__li
+        width: 100%
+        &:last-child .mainHeader-nav-menuContainer__a
+            border-bottom: transparent
+    .mainHeader-nav-menuContainer__a
+        width: 100%
+        padding: 15px 20px
+        border-bottom: 1px solid $color-grey
+        
