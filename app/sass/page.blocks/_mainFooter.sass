@@ -1,1 +1,49 @@
 .mainFooter
+    padding: 60px 0
+
+.mainFooter-infoBlock
+    &__logo
+        margin-bottom: 30px
+        height: 70px
+    &__desc
+        color: $color-purple
+        font-size: 18px
+
+.mainFooter-navBlock
+    display: flex
+    flex-direction: column
+    &__title
+        font-family: $ff-asapBold
+        font-size: 20px
+        text-transform: uppercase
+        height: 70px
+        margin-bottom: 30px
+        display: flex
+        align-items: center
+    &__content
+        margin-bottom: 60px
+
+
+.footerNav
+    list-style: none
+    padding-left: 0
+    margin-bottom: 0
+    &__li
+    &__a
+        color: $color-purple
+        font-size: 20px
+        padding: 8px 0
+        display: block
+        &:hover,
+        &:active,
+        &focus
+            text-decoration: none
+            color: $color-pink
+        
++media-breakpoint-down($lg)
+    .mainFooter-navBlock__title
+        margin-bottom: 0
+    .mainFooter-navBlock__content
+        margin-bottom: 30px
+    .mainFooter-infoBlock
+        margin-bottom: 30px

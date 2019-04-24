@@ -7,6 +7,7 @@
 body
     font-family: $ff-asapRegular
     font-size: 16px
+    color: $color-purple
     background-image: url("images/mainBG.svg")
     background-size: cover
     background-repeat: no-repeat
@@ -14,9 +15,11 @@ body
 
 
 
+// import components
+@import "page.components/_mainLogo"
+@import "page.components/_btnLink"
 
-
-
+// imports blocks
 @import "page.blocks/mainHeader"
 @import "page.blocks/mainContainer"
 @import "page.blocks/mainFooter"

@@ -1,1 +1,85 @@
 .mainContainer
+
+// section-hero
+
+.section-hero
+    &__row
+        
+    &-textBlock
+        display: flex
+        flex-direction: column
+        justify-content: center
+        font-family: $ff-asapRegular
+        &__title
+            margin-top: 30%
+            font-size: 50px
+            line-height: 60px
+            color: $color-turquoise
+            margin-bottom: 30px
+            text-transform: uppercase
+        &__desc
+            font-size: 26px
+            line-height: 30px
+            color: $color-purple
+    &-imageBlock
+        min-height: 600px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__img
+            display: block
+            width: 100%
+            height: auto
+
+// section-sellingPoints
+
+.section-sellingPoints
+    &__row
+    &__col
+        margin-top: 60px
+        margin-bottom: 60px
+
+.sellingPoints-block
+    display: flex
+    flex-direction: column
+    text-align: center
+    background-color: $color-whiteLight
+    padding: 30px
+    border-radius: $borderRadius-main
+    box-shadow: $boxShadow-main
+    height: 100%
+    &__icon
+        margin-bottom: 20px
+        height: 250px
+        &Img
+            display: block
+            height: 250px
+            width: auto
+            margin: auto
+
+    &__title
+        text-transform: uppercase
+        color: $color-turquoise
+        font-size: $fontSize-titleMain
+        line-height: $lineHeight-titleMain
+        margin-bottom: 20px
+    &__desc
+        text-align: left
+        font-size: 18px
+        margin-bottom: 20px
+
+#increaseIcon .sellingPoints-block__iconImg
+    width: 210px
+
+
+
++media-breakpoint-down($lg)
+    .section-hero-textBlock__title
+        margin-top: 50px
+        font-size: 40px
+        line-height: 45px
+    .section-sellingPoints__col
+        margin-top: 30px
+        margin-bottom: 30px
+    .sellingPoints-block
+        padding: 30px 40px

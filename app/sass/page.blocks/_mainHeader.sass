@@ -1,21 +1,5 @@
 .mainHeader
 
-.mainLogo
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    align-items: center
-    &__icon
-        max-width: 100%
-        width: 60px
-        height: auto
-        margin-right: 20px
-    &__text
-        font-family: $ff-montserratBold
-        font-size: 20px
-        color: $color-purple
-        text-transform: uppercase
-
 .mainHeader-nav
     margin: 8px 0
     display: flex
@@ -34,6 +18,10 @@
             margin-bottom: 0
             padding-left: 0
         &__li
+            &:hover>.sub-menu,
+            &:active>.sub-menu,
+            &focus>.sub-menu
+                display: block
         &__a
             display: block
             font-family: $ff-asapRegular
@@ -47,14 +35,33 @@
                 text-decoration: none
                 color: $color-pink
             
-
-
-
-
-
 .sub-menu
     display: none
     position: absolute
+    list-style: none
+    padding-left: 0
+    border-radius: $borderRadius-main
+    box-shadow: $boxShadow-main
+    background-color: $color-whiteLight
+    z-index: 50
+    
+.sub-menu>li
+    &:last-child a
+        border-bottom: transparent
+.sub-menu>li>a
+    color: $color-purple
+    padding: 15px 20px
+    min-width: 150px
+    display: block
+    border-bottom: 1px solid $color-grey
+    &:hover,
+    &:active,
+    &focus
+        color: $color-pink
+        text-decoration: none
+        
+
+
 
 
 +media-breakpoint-down($lg)
@@ -81,7 +88,7 @@
         display: flex
         flex-direction: column
         justify-content: flex-start
-        border-radius: 10px
+        border-radius: $borderRadius-main
         border-radius: $borderRadius-main
         box-shadow: $boxShadow-main
         background-color: $color-whiteLight
@@ -93,4 +100,11 @@
         width: 100%
         padding: 15px 20px
         border-bottom: 1px solid $color-grey
-        
+    
+    .sub-menu
+        display: block
+        position: initial
+        padding-left: 30px
+        padding-right: 30px
+        border-radius: initial
+        box-shadow: $boxShadow-main

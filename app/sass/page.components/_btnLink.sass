@@ -1,0 +1,23 @@
+.btnLink
+    display: inline-block
+    background-color: $color-white
+    color: $color-purple
+    padding: 25px 80px
+    border-radius: 50px
+    box-shadow: $boxShadow-main
+    font-size: 20px
+    &:hover,
+    &:active,
+    &focus
+        text-decoration: none
+        background-color: #dddddd
+        color: $color-pink
+
+
+.btnLink.btnLink_color_pink
+    background-color: $color-pink
+    color: $color-white
+    &:hover,
+    &:active,
+    &focus
+        background-color: darken( $color-pink, 10% )
