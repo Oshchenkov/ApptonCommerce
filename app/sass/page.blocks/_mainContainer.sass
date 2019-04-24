@@ -71,6 +71,37 @@
 #increaseIcon .sellingPoints-block__iconImg
     width: 210px
 
+// section-sellingPoints
+
+.section-mainFeatures
+    &__row
+
+.mainFeatures
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__col
+        margin-bottom: 30px
+
+    &__textBlock
+        background-color: $color-whiteLight
+        border-radius: $borderRadius-main
+        box-shadow: $boxShadow-main
+        padding: 40px
+        &-title
+            color: $color-turquoise
+            font-size: $fontSize-titleMain
+            line-height: $lineHeight-titleMain
+            text-transform: uppercase
+            margin-bottom: 30px
+        &-desc
+            font-size: $fontSite-descMain
+    &__imageBlock
+        display: flex
+        &-img
+            display: block
+            width: 100%
+            height: auto
 
 
 +media-breakpoint-down($lg)
@@ -83,3 +114,5 @@
         margin-bottom: 30px
     .sellingPoints-block
         padding: 30px 40px
+    .section-sellingPoints
+        margin-bottom: 30px
