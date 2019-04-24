@@ -49,7 +49,7 @@ body {
   font-family: "Asap-Regular", Omnibus Type, sans-serif;
   font-size: 16px;
   color: #3B1274;
-  background-image: url("images/mainBG.svg");
+  background-image: url("../images/mainBG.svg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -90,6 +90,18 @@ body {
 
 .mainLogo:hover, .mainLogo:active, .mainLogofocus {
   text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+  .mainLogo__icon {
+    max-width: 100%;
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+  }
+  .mainLogo__text {
+    font-size: 16px;
+  }
 }
 
 .btnLink {
@@ -475,15 +487,15 @@ body {
 @media (max-width: 991.98px) {
   .section-hero-textBlock__title {
     margin-top: 50px;
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 35px;
+    line-height: 40px;
   }
   .section-sellingPoints__col {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .sellingPoints-block {
-    padding: 30px 40px;
+    padding: 15px 30px;
   }
   .section-sellingPoints {
     margin-bottom: 30px;
@@ -563,6 +575,9 @@ body {
   }
   .mainFooter-infoBlock {
     margin-bottom: 30px;
+  }
+  .mainFooterlink-col {
+    text-align: center;
   }
 }
 
