@@ -1,7 +1,7 @@
 .mainHeader
 
 .mainHeader-nav
-    margin: 8px 0
+    padding: 8px 0
     display: flex
     justify-content: space-between
     &-mobContainer
@@ -35,6 +35,21 @@
                 text-decoration: none
                 color: $color-pink
             
+
+
+.mainHeader
+    height:     $fixedHeaderNav-pc
+.mainHeader.fixedHeader+.mainContainer
+    padding-top: $fixedHeaderNav-pc
+.mainHeader-nav.fixed
+    position: fixed
+    top: 0
+    width: 100%
+    background-color: $color-whiteLight
+    z-index: 199
+    box-shadow: $boxShadow-main
+
+
 .sub-menu
     display: none
     position: absolute
@@ -65,6 +80,7 @@
 
 
 +media-breakpoint-down($lg)
+    .mainHeader
     .mainHeader-nav
         margin: 0
     .mainHeader-nav-mobContainer
@@ -81,6 +97,11 @@
         display: block
         height: 50px 
         margin: auto
+
+    .mainHeader
+        height:     $fixedHeaderNav-mob
+    .mainHeader.fixedHeader+.mainContainer
+        padding-top: $fixedHeaderNav-mob
         
     .mainHeader-nav-menuContainer__ul 
         margin-top: 10px

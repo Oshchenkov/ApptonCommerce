@@ -53,6 +53,15 @@ body {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mainLogo {
@@ -76,7 +85,7 @@ body {
 
 .mainLogo__icon {
   max-width: 100%;
-  width: 60px;
+  width: 50px;
   height: auto;
   margin-right: 20px;
 }
@@ -132,7 +141,7 @@ body {
 }
 
 .mainHeader-nav {
-  margin: 8px 0;
+  padding: 8px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -204,6 +213,24 @@ body {
   color: #F36A7B;
 }
 
+.mainHeader {
+  height: 100px;
+}
+
+.mainHeader.fixedHeader + .mainContainer {
+  padding-top: 100px;
+}
+
+.mainHeader-nav.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 199;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
 .sub-menu {
   display: none;
   position: absolute;
@@ -273,6 +300,12 @@ body {
     display: block;
     height: 50px;
     margin: auto;
+  }
+  .mainHeader {
+    height: 90px;
+  }
+  .mainHeader.fixedHeader + .mainContainer {
+    padding-top: 90px;
   }
   .mainHeader-nav-menuContainer__ul {
     margin-top: 10px;
