@@ -217,10 +217,6 @@ body {
   height: 100px;
 }
 
-.mainHeader.fixedHeader + .mainContainer {
-  padding-top: 100px;
-}
-
 .mainHeader-nav.fixed {
   position: fixed;
   top: 0;
@@ -303,9 +299,6 @@ body {
   }
   .mainHeader {
     height: 90px;
-  }
-  .mainHeader.fixedHeader + .mainContainer {
-    padding-top: 90px;
   }
   .mainHeader-nav-menuContainer__ul {
     margin-top: 10px;
