@@ -9,7 +9,21 @@ var     gulp          = require('gulp'),
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require('gulp-notify');
+		notify        = require('gulp-notify'),
+		clean         = require('gulp-clean');
+
+gulp.task('copyToDemo',function(){
+	return gulp.src(['app/**/*','!app/sass/**/*'])
+	.pipe(gulp.dest('docs')) // Create docs folder for gitHub page to show demo
+});
+
+gulp.task('cleanDemoDocsFolder', function () {
+    return gulp.src('docs/', { read: false, allowEmpty: true })
+        .pipe(clean());
+});
+
+gulp.task('demo', gulp.series(['cleanDemoDocsFolder','copyToDemo']));
+
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -69,7 +83,7 @@ if (gulpVersion == 3) {
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
 		gulp.watch('app/*.html', ['code'])
 	});
-	gulp.task('default', ['watch']);
+	gulp.task('default', ['watch','demo']);
 }
 
 if (gulpVersion == 4) {
@@ -78,5 +92,5 @@ if (gulpVersion == 4) {
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
 		gulp.watch('app/*.html', gulp.parallel('code'))
 	});
-	gulp.task('default', gulp.parallel('styles','stylesMin', 'scripts', 'browser-sync', 'watch'));
+	gulp.task('default', gulp.parallel('styles','stylesMin', 'scripts', 'browser-sync', 'watch','demo'));
 }
