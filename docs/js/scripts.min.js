@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    // Fixed header on scroll
+    
     $(window).scroll(function(){
         if (($(window).scrollTop() >= 112)&& ($( window ).width() >= 992 )) {
            $('#mainHeaderNav').addClass('fixed');
@@ -13,6 +16,8 @@ $(document).ready(function(){
            $('.mainHeader').removeClass('fixedHeader');
         }
     });
+    
+    //
     
 });
 
