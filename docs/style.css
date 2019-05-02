@@ -64,6 +64,12 @@ body {
           flex-direction: column;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .mainLogo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -140,16 +146,19 @@ body {
   background-color: #ef3b51;
 }
 
+.mainHeader {
+  margin-bottom: 102px;
+}
+
 .mainHeader-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 199;
   padding: 8px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
 .mainHeader-nav-mobContainer {
@@ -213,20 +222,6 @@ body {
   color: #F36A7B;
 }
 
-.mainHeader {
-  height: 100px;
-}
-
-.mainHeader-nav.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 199;
-  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-}
-
 .sub-menu {
   display: none;
   position: absolute;
@@ -258,6 +253,9 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .mainHeader {
+    margin-bottom: 90px;
+  }
   .mainHeader-nav {
     margin: 0;
   }
@@ -296,9 +294,6 @@ body {
     display: block;
     height: 50px;
     margin: auto;
-  }
-  .mainHeader {
-    height: 90px;
   }
   .mainHeader-nav-menuContainer__ul {
     margin-top: 10px;
@@ -363,7 +358,7 @@ body {
   font-family: "Asap-Regular", Omnibus Type, sans-serif;
 }
 
-.section-hero-textBlock__title {
+.section-hero-textBlock__title, .upsellHero-block__title {
   margin-top: 30%;
   font-size: 50px;
   line-height: 60px;
@@ -510,8 +505,22 @@ body {
   height: auto;
 }
 
+.section-upsellHero {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.section-upsellHero__bgImg {
+  max-height: 635px;
+}
+
+.upsellHero-block__title {
+  text-transform: uppercase;
+  color: #51E3D4;
+}
+
 @media (max-width: 991.98px) {
-  .section-hero-textBlock__title {
+  .section-hero-textBlock__title, .upsellHero-block__title {
     margin-top: 50px;
     font-size: 35px;
     line-height: 40px;

@@ -31,6 +31,12 @@
             width: 100%
             height: auto
 
++media-breakpoint-down($lg)
+    .section-hero-textBlock__title
+        margin-top: 50px
+        font-size: 35px
+        line-height: 40px
+
 // section-sellingPoints
 
 .section-sellingPoints
@@ -71,7 +77,16 @@
 #increaseIcon .sellingPoints-block__iconImg
     width: 210px
 
-// section-sellingPoints
++media-breakpoint-down($lg)
+    .section-sellingPoints__col
+        margin-top: 30px
+        margin-bottom: 30px
+    .sellingPoints-block
+        padding: 15px 30px
+    .section-sellingPoints
+        margin-bottom: 30px
+
+// section-mainFeatures
 
 .section-mainFeatures
     &__row
@@ -103,16 +118,98 @@
             width: 100%
             height: auto
 
+// section-upsellHero
+.section-upsellHero
+    margin-top: 90px
+    margin-bottom: 90px
+
+.section-upsellHero__bgImg
+    max-height: 500px
+
+.upsellHero-block
+    &__title
+        @extend .section-hero-textBlock__title
+        margin-top: 10%
+        margin-bottom: 60px
+        text-transform: uppercase
+        color: $color-turquoise
+    &__desc
+        @extend .section-hero-textBlock__desc
 
 +media-breakpoint-down($lg)
-    .section-hero-textBlock__title
-        margin-top: 50px
-        font-size: 35px
-        line-height: 40px
-    .section-sellingPoints__col
+    .section-upsellHero
         margin-top: 30px
         margin-bottom: 30px
-    .sellingPoints-block
-        padding: 15px 30px
-    .section-sellingPoints
+    .section-upsellHero__bgImg
+        margin: auto
+    .upsellHero-block__title
+        margin-top: 0
+
+// .section-pointsBlocks
+
+.section-pointsBlocks
+    &__col
+        @extend .section-sellingPoints__col
+
+.pointsBlock
+    @extend .sellingPoints-block
+    &__icon
+        @extend .sellingPoints-block__icon
         margin-bottom: 30px
+        &Img
+            @extend .sellingPoints-block__iconImg
+    &__title
+        @extend .sellingPoints-block__title
+        margin-bottom: 30px
+    &__desc
+        @extend .sellingPoints-block__desc
+
+
+// section-features
+
+.section-features
+    margin-top: 60px
+    margin-bottom: 60px
+
+.section-features .mainFeatures__col
+    margin-bottom: 90px
+
+
+#applyDiscounts .mainFeatures__col
+    justify-content: flex-end
+    display: flex
+#applyDiscounts .mainFeatures__imageBlock
+    max-width: 400px
+
+#pickTriggers .mainFeatures__imageBlock
+    max-width: 300px
+
+#viewUpsellStats .mainFeatures__col
+    display: flex
+    justify-content: flex-end
+#viewUpsellStats .mainFeatures__imageBlock
+    max-width: 400px
+
+
++media-breakpoint-down($lg)
+    .section-features .mainFeatures__col
+        margin-bottom: 30px
+    .section-features
+        margin-top: 30px
+        margin-bottom: 30px
+    .mainFeatures .mainFeatures__col
+        justify-content: center !important
+        display: flex
+    #pickTriggers .mainFeatures__imageBlock
+        max-width: 400px
+
+
+
+
+
+//
+// Media
+//
+
+
+    

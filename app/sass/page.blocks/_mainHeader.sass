@@ -1,9 +1,14 @@
-.mainHeader
 
+.mainHeader
+    margin-bottom: 102px
 .mainHeader-nav
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 199
     padding: 8px 0
-    display: flex
-    justify-content: space-between
+    background-color: $color-whiteLight
+    box-shadow: $boxShadow-main
     &-mobContainer
         display: flex
         justify-content: flex-start
@@ -37,18 +42,6 @@
             
 
 
-.mainHeader
-    height:     $fixedHeaderNav-pc
-.mainHeader.fixedHeader+.mainContainer
-    // padding-top: $fixedHeaderNav-pc
-.mainHeader-nav.fixed
-    position: fixed
-    top: 0
-    width: 100%
-    background-color: $color-whiteLight
-    z-index: 199
-    box-shadow: $boxShadow-main
-
 
 .sub-menu
     display: none
@@ -81,6 +74,7 @@
 
 +media-breakpoint-down($lg)
     .mainHeader
+        margin-bottom: 90px
     .mainHeader-nav
         margin: 0
     .mainHeader-nav-mobContainer
@@ -98,10 +92,6 @@
         height: 50px 
         margin: auto
 
-    .mainHeader
-        height:     $fixedHeaderNav-mob
-    .mainHeader.fixedHeader+.mainContainer
-        // padding-top: $fixedHeaderNav-mob
         
     .mainHeader-nav-menuContainer__ul 
         margin-top: 10px
