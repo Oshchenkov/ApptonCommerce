@@ -152,7 +152,7 @@ img {
 }
 
 .btnLink.btnLink_color_yellow:hover, .btnLink.btnLink_color_yellow:active, .btnLink.btnLink_color_yellowfocus {
-  background-color: #dbaa11;
+  background-color: #ffdd00c7;
 }
 
 .btnLink.btnLink_size_lg {
@@ -547,12 +547,13 @@ body.upsell-page {
 }
 
 .section-upsellHero {
-  margin-top: 90px;
-  margin-bottom: 90px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .section-upsellHero__bgImg {
   max-height: 500px;
+  min-width: 240px;
 }
 
 .upsellHero-block__title {
@@ -568,10 +569,16 @@ body.upsell-page {
     margin-bottom: 30px;
   }
   .section-upsellHero__bgImg {
-    margin: 0 auto -60px auto;
+    margin: 0 auto 60px auto;
   }
   .upsellHero-block__title {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-upsellHero__bgImg {
+    min-width: 320px;
   }
 }
 
@@ -709,6 +716,9 @@ body.upsell-page {
 }
 
 @media (min-width: 992px) {
+  .section-discountItems {
+    margin-bottom: 60px;
+  }
   .section-discountItems__col {
     padding: 0 50px;
     margin-bottom: 90px;
