@@ -33,6 +33,7 @@
 
 +media-breakpoint-down($lg)
     .section-hero-textBlock__title
+        text-align: center
         margin-top: 50px
         font-size: 35px
         line-height: 40px
@@ -118,6 +119,15 @@
             width: 100%
             height: auto
 
+
+//
+//  UPSELL PAGE
+//
+
+body.upsell-page
+    background-image: url("../images/uppsell-BG.svg")    
+
+
 // section-upsellHero
 .section-upsellHero
     margin-top: 90px
@@ -141,7 +151,7 @@
         margin-top: 30px
         margin-bottom: 30px
     .section-upsellHero__bgImg
-        margin: auto
+        margin: 0 auto -60px auto
     .upsellHero-block__title
         margin-top: 0
 
@@ -164,12 +174,13 @@
     &__desc
         @extend .sellingPoints-block__desc
 
-
++media-breakpoint-up($lg)
+    .section-pointsBlocks
+        margin-bottom: 90px
 // section-features
 
 .section-features
     margin-top: 60px
-    margin-bottom: 60px
 
 .section-features .mainFeatures__col
     margin-bottom: 90px
@@ -190,6 +201,9 @@
 #viewUpsellStats .mainFeatures__imageBlock
     max-width: 400px
 
++media-breakpoint-up($lg)
+    .section-features #applyDiscounts .mainFeatures__col
+        margin-bottom: 15%
 
 +media-breakpoint-down($lg)
     .section-features .mainFeatures__col
@@ -203,13 +217,90 @@
     #pickTriggers .mainFeatures__imageBlock
         max-width: 400px
 
+// section-discountItems
 
+.section-discountItems
+    &__row
+    &__col
+        margin-bottom: 60px
+
+
+.discountItem
+    height: 100%
+    background-color: $color-whiteLight
+    border-radius:  $borderRadius-main
+    box-shadow: $boxShadow-main
+    padding: 30px
+    &__icon
+        display: flex
+        flex-direction: row
+        justify-content: center
+        margin-bottom: 20px
+        &-img
+            max-width: 70px
+    &__title
+        font-size: 24px
+        line-height: 26px
+        text-align: center
+        color: $color-pink
+        margin-bottom: 20px
+        text-transform: uppercase
+    &__desc
+        font-size: $fontSite-descMain
+
++media-breakpoint-up($lg)
+    .section-discountItems
+        &__row
+        &__col
+            padding: 0 50px
+            margin-bottom: 90px
+
+// section-priceModel
+
+.section-priceModel
+    margin-bottom: 30px
+    &__row
+    &__col
+        
+
+.priceModel
+    background-color: $color-whiteLight
+    border-radius:  $borderRadius-main
+    box-shadow: $boxShadow-main
+    padding: 30px 50px
+    &__row
+    &__col
+        margin-bottom: 20px
+    &__title
+        text-align: center
+        color: $color-pink
+        text-transform: uppercase
+        margin-bottom: 20px
+    &__subTitle
+        text-align: center
+        color: $color-purple
+        font-size: $fontSize-titleMain
+        line-height: $lineHeight-titleMain
+    &__text
+    &__linkContainer
+        margin-bottom: 0
+
+
++media-breakpoint-up($lg)
+    .section-priceModel
+        margin-bottom: 60px
+    .priceModel
+        margin: 0 30px
+    .priceModel__col
+        margin-bottom: 30px
+    .priceModel__subTitle
+        font-size: 40px
+        margin-bottom: 20px
+    .priceModel__text
+        padding: 0 30px
 
 
 
 //
-// Media
+//   PAGE
 //
-
-
-    

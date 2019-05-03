@@ -2,7 +2,7 @@
     display: inline-block
     background-color: $color-white
     color: $color-purple
-    padding: 25px 80px
+    padding: 20px 80px
     border-radius: 50px
     box-shadow: $boxShadow-main
     font-size: 20px
@@ -13,6 +13,7 @@
         background-color: #dddddd
         color: $color-pink
 
+// Color
 
 .btnLink.btnLink_color_pink
     background-color: $color-pink
@@ -21,3 +22,19 @@
     &:active,
     &focus
         background-color: darken( $color-pink, 10% )
+
+.btnLink.btnLink_color_yellow
+    background-color: $color-yellow
+    color: $color-purple
+    &:hover,
+    &:active,
+    &focus
+        background-color: darken( $color-yellow, 10% )
+
+// Size
+
+.btnLink.btnLink_size_lg
+    font-size: 26px
+    line-height: 30px
+    padding: 20px 60px
+
