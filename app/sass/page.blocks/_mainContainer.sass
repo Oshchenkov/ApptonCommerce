@@ -311,5 +311,171 @@ body.upsell-page
 
 
 //
-//   PAGE
+//   Help page
 //
+
+body.help
+    background-image: url("../images/help-bg.svg")
+
+// section-search
+
+
+.section-search
+    margin-top: 30px
+    margin-bottom: 30px 
+    &__row
+    &__col
+        &-searchBlock
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+
+.searchForm
+    display: inline-block
+    &__inputContainer
+        display: flex
+        flex-direction: row
+        align-items: center
+        position: relative
+        justify-content: flex-end
+    &__searchIcon
+        margin-right: 10px
+    &__inputSearch
+
+
+.inputSearch
+    background-color: transparent
+    border: 1px solid transparent
+    padding-left: 5px
+    padding-right: 5px
+    width: 100px
+    transition: width 1s
+    transition-timing-function: ease-in-out
+    &:hover,
+    &:active,
+    &:focus
+        border-bottom:  1px solid  $color-purple
+        outline: none
+        width: 200px
+.searchIcon
+    display: inline-block
+    content: ''
+    color: transparent
+    background-color: transparent
+    outline: none
+    border: none
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background-image: url("../images/icons/ic_search_24px.svg")
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: 9
+.closeIcon
+    display: inline-block
+    display: none
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background-image: url("../images/icons/close-icon.svg")
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: 9
+
+// section-helpHero
+
+.section-helpHero
+    &__row
+    &__col
+        &-block
+            display: flex
+            flex-direction: row
+            justify-content: center
+    
+.helpHero
+    display: flex
+    flex-direction: column
+    &__logo
+        max-width: 120px
+        margin-bottom: 30px
+        & img
+            
+    &__title
+        color: $color-turquoise
+        text-transform: uppercase
+        margin-bottom: 20px
+        font-size: 40px
+    &__desc
+        font-size: 20px
+        padding-right: 10%
+        margin-bottom: 30px
+
+
+.helpBlock
+    background-color: $color-whiteLight
+    border-radius: $borderRadius-main
+    box-shadow: $boxShadow-main
+    display: flex
+    flex-direction: column
+    height: 100%
+    &__header
+        padding: 15px
+        &-text
+            font-size: $fontSize-titleMain
+            color: $color-turquoise
+            text-align: center
+            margin-bottom: 10px
+        &-link
+            display: block
+            color: $color-white
+            background-color: $color-yellow
+            padding: 10px 20px
+            border-radius: $borderRadius-main
+            font-size: 20px
+            &:hover,
+            &:active,
+            &:focus
+                color: $color-white
+                text-decoration: none
+                background-color: $color-yellowLight
+    &__content
+        &-nav
+            list-style: none
+            display: flex
+            flex-direction: column
+            align-content: space-between
+            margin-bottom: 20px
+            &Li
+                &-a
+                    color: $color-purple
+                    padding: 12px 30px 
+                    display: block
+                    font-size: 20px
+                    &:hover,
+                    &:active,
+                    &:focus
+                        color: $color-pink
+
+.section-helpBlocks
+    &__row
+    &__col
+        margin-bottom: 60px
+
+
++media-breakpoint-up($lg)
+    .section-helpBlocks
+        margin-top: 120px
+        margin-bottom: 120px
+    .section-helpHero__col-block
+        justify-content: flex-end
+
++media-breakpoint-down($lg)
+    .section-helpBlocks
+        margin-top: 60px
+    .helpHero__logo
+        align-self: center
+    .helpHero__title
+        font-size: 35px
+    .helpHero__desc
+        font-size: 18px
+        margin-bottom: 60px
