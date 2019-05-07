@@ -1,3 +1,13 @@
+// wp-admin bar
+.admin-bar .mainHeader-nav
+    top: 32px
+@media screen and (max-width: 782px)
+    .admin-bar .mainHeader-nav
+        top: 46px
+@media screen and (max-width: 600px)
+    .admin-bar .mainHeader-nav
+        top: 0
+
 
 .mainHeader
     margin-bottom: 102px
@@ -15,30 +25,30 @@
     &-menuContainer
         display: flex
         justify-content: flex-end
-        &__ul
-            display: flex
-            flex-direction: row
-            align-items: center
-            list-style: none
-            margin-bottom: 0
-            padding-left: 0
-        &__li
-            &:hover>.sub-menu,
-            &:active>.sub-menu,
-            &focus>.sub-menu
-                display: block
-        &__a
+.mainHeader-nav-menuContainer__ul
+    display: flex
+    flex-direction: row
+    align-items: center
+    list-style: none
+    margin-bottom: 0
+    padding-left: 0
+    &>li
+        &:hover>.sub-menu,
+        &:active>.sub-menu,
+        &focus>.sub-menu
             display: block
-            font-family: $ff-asapRegular
-            font-size: 26px
-            color: $color-purple
-            padding: 15px 
-            position: relative
-            &:hover,
-            &:active,
-            &focus
-                text-decoration: none
-                color: $color-pink
+.mainHeader-nav-menuContainer__ul>li>a
+    display: block
+    font-family: $ff-asapRegular
+    font-size: 26px
+    color: $color-purple
+    padding: 15px 
+    position: relative
+    &:hover,
+    &:active,
+    &focus
+        text-decoration: none
+        color: $color-pink
             
 
 
@@ -92,7 +102,8 @@
         height: 50px 
         margin: auto
 
-        
+    .menu-main-container
+        width: 100%
     .mainHeader-nav-menuContainer__ul 
         margin-top: 10px
         width: 100%
@@ -103,11 +114,11 @@
         border-radius: $borderRadius-main
         box-shadow: $boxShadow-main
         background-color: $color-whiteLight
-    .mainHeader-nav-menuContainer__li
+    .mainHeader-nav-menuContainer__ul>li
         width: 100%
-        &:last-child .mainHeader-nav-menuContainer__a
+    .mainHeader-nav-menuContainer__ul>li:last-child>a
             border-bottom: transparent
-    .mainHeader-nav-menuContainer__a
+    .mainHeader-nav-menuContainer__ul>li>a
         width: 100%
         padding: 15px 20px
         border-bottom: 1px solid $color-grey

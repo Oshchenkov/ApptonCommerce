@@ -70,6 +70,19 @@ img {
   height: auto;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.containerFliud {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .mainLogo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -161,6 +174,22 @@ img {
   padding: 20px 60px;
 }
 
+.admin-bar .mainHeader-nav {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .mainHeader-nav {
+    top: 46px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .admin-bar .mainHeader-nav {
+    top: 0;
+  }
+}
+
 .mainHeader {
   margin-bottom: 102px;
 }
@@ -217,13 +246,13 @@ img {
   padding-left: 0;
 }
 
-.mainHeader-nav-menuContainer__li:hover > .sub-menu,
-.mainHeader-nav-menuContainer__li:active > .sub-menu,
-.mainHeader-nav-menuContainer__lifocus > .sub-menu {
+.mainHeader-nav-menuContainer__ul > li:hover > .sub-menu,
+.mainHeader-nav-menuContainer__ul > li:active > .sub-menu,
+.mainHeader-nav-menuContainer__ul > lifocus > .sub-menu {
   display: block;
 }
 
-.mainHeader-nav-menuContainer__a {
+.mainHeader-nav-menuContainer__ul > li > a {
   display: block;
   font-family: "Asap-Regular", Omnibus Type, sans-serif;
   font-size: 26px;
@@ -232,7 +261,7 @@ img {
   position: relative;
 }
 
-.mainHeader-nav-menuContainer__a:hover, .mainHeader-nav-menuContainer__a:active, .mainHeader-nav-menuContainer__afocus {
+.mainHeader-nav-menuContainer__ul > li > a:hover, .mainHeader-nav-menuContainer__ul > li > a:active, .mainHeader-nav-menuContainer__ul > li > afocus {
   text-decoration: none;
   color: #F36A7B;
 }
@@ -310,6 +339,9 @@ img {
     height: 50px;
     margin: auto;
   }
+  .menu-main-container {
+    width: 100%;
+  }
   .mainHeader-nav-menuContainer__ul {
     margin-top: 10px;
     width: 100%;
@@ -333,13 +365,13 @@ img {
             box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     background-color: rgba(255, 255, 255, 0.9);
   }
-  .mainHeader-nav-menuContainer__li {
+  .mainHeader-nav-menuContainer__ul > li {
     width: 100%;
   }
-  .mainHeader-nav-menuContainer__li:last-child .mainHeader-nav-menuContainer__a {
+  .mainHeader-nav-menuContainer__ul > li:last-child > a {
     border-bottom: transparent;
   }
-  .mainHeader-nav-menuContainer__a {
+  .mainHeader-nav-menuContainer__ul > li > a {
     width: 100%;
     padding: 15px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
@@ -956,6 +988,7 @@ body.help {
   color: #51E3D4;
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .helpBlock__header-link {
