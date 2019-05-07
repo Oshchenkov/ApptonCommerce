@@ -74,6 +74,10 @@ body {
   overflow-x: hidden;
 }
 
+.mainContainer {
+  margin-top: 30px;
+}
+
 .containerFliud {
   width: 100vw;
   position: relative;
@@ -446,7 +450,7 @@ body {
 @media (max-width: 991.98px) {
   .section-hero-textBlock__title, .upsellHero-block__title {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
     font-size: 35px;
     line-height: 40px;
   }
