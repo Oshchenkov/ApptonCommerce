@@ -485,7 +485,94 @@ body.help
         font-size: 18px
         margin-bottom: 60px
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+  background-color: transparent !important
+  -webkit-background-color: transparent !important
+  color: #000
+  
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important
 
 //----------------------------------------
-// 				 page
+// 				 Page Results
 //----------------------------------------
+
+.shortHeader
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  &__icon
+    & img 
+      max-width: 50px
+  &__text
+    color: $color-turquoise
+    text-transform: uppercase
+    font-size: 35px
+    margin-left: 20px
+
+.searchResult
+  &__container
+    background-color: $color-whiteLight
+    border-radius: $borderRadius-main
+    box-shadow: $boxShadow-main
+
+.searchResult-item
+  margin-bottom: 40px
+  &__a
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    padding: 10px 0
+    margin-bottom: 10px
+    &Span
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      border-left: 15px solid $color-yellow
+      width: 0
+      height: 0
+      display: inline-block
+      color: #000
+      margin-right: 10px
+    &Text
+      display: inline-block
+      font-size: 20px
+      color: $color-purple
+      font-weight: bold
+  
+.searchResult-loadMore
+  display: flex
+  justify-content: center
+  margin-top: 50px
+  &__link
+    display: block
+    color: $color-pink
+    font-size: 20px
+    font-weight: bold
+    &:hover,
+    &:active,
+    &focus
+      color: darken( $color-pink, 10% )
+
++media-breakpoint-down($lg)
+  .shortHeader__text
+    font-size: 24px
+
+.searchResult-NoItem
+  margin-top: 30px
+  margin-bottom: 30px
+  &__text
+    color: $color-pink
+    font-size: 20px
+    font-weight: bold
