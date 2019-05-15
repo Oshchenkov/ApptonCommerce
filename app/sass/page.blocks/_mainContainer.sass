@@ -128,7 +128,9 @@
 //----------------------------------------
 
 
-body.upsell-page
+body.upsell-page,
+body.page-id-28,
+body.page-id-42
     background-image: url("../images/uppsell-BG.svg")    
 
 
@@ -318,7 +320,9 @@ body.upsell-page
 // 				Help page
 //----------------------------------------
 
-body.help
+body.help,
+body.page-id-24,
+body.page-id-64
     background-image: url("../images/help-bg.svg")
 
 // section-search
@@ -576,3 +580,85 @@ input:-webkit-autofill:active
     color: $color-pink
     font-size: 20px
     font-weight: bold
+
+//----------------------------------------
+// 				Contact page
+//----------------------------------------
+
+body.contact-page,
+body.page-id-60
+  background-image: url(../images/contactBg.svg)
+
+.contact-section
+  margin: 60px 0
+  &__row
+  &__col
+
+.pageTitle
+  font-size: 40px
+  color: $color-turquoise
+  margin-bottom: 30px
+
+.contactForm
+  &__name
+  &__email
+  &__messageCount
+    text-align: right
+    color: $color-yellow
+    font-size: 20px
+    margin-top: 5px
+    margin-bottom: 5px
+  &__message
+  &__submit
+    text-align: right
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="namber"]
+  border: none
+  border-bottom: 2px solid $color-purple
+  outline: none
+  font-size: 20px
+  width: 100%
+  padding: 4px 0
+  margin-bottom: 10px
+  background-color: transparent
+.contactForm input::-webkit-input-placeholder,
+.contactForm textarea::-webkit-input-placeholder
+  color: $color-purple
+
+.contactForm textarea
+  border: 2px solid $color-purple
+  width: 100%
+  border-radius: $borderRadius-main
+  padding: 10px
+  font-size: 20px
+  height: 200px
+  // background-color: transparent
+.contactForm input[type="submit"]
+  width: initial
+  font-size: 20px
+  border: 1px solid  lighten( $color-yellow, 20% )
+  background-color: lighten( $color-yellow, 30% )
+  border-radius: 20px
+  padding: 5px 50px
+  outline: none
+  transition: $transitionAll
+  margin: 30px 0
+.contactForm input[type="submit"]:hover,
+.contactForm input[type="submit"]:active,
+.contactForm input[type="submit"]:focus
+  background-color: lighten( $color-yellow, 10% )
+
+.contactInfo
+  font-size: 20px
+  &__title
+    margin-bottom: 30px
+  &__p
+
+// .contactForm>.wpcf7
+//   display: none
+
+.contactFormSuccess
+  display: none
+  font-size: 20px

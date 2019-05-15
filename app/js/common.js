@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(window).on('load', function () {
 
     // Fixed header on scroll
 
-    $(window).scroll(function () {
+/*     $(window).scroll(function () {
         if (($(window).scrollTop() >= 112) && ($(window).width() >= 992)) {
             $('#mainHeaderNav').addClass('fixed');
             $('.mainHeader').addClass('fixedHeader');
@@ -15,18 +15,15 @@ $(document).ready(function () {
             $('#mainHeaderNav').removeClass('fixed');
             $('.mainHeader').removeClass('fixedHeader');
         }
-    });
+    }); */
 
-    //
-    if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
-        $(window).load(function () {
-            $('input:-webkit-autofill').each(function () {
-                var text = $(this).val();
-                var name = $(this).attr('name');
-                $(this).after(this.outerHTML).remove();
-                $('input[name=' + name + ']').val(text);
-            });
-        });
-    }
+    // WP CF7 contact page
+
+    var wpcf7Elm = document.querySelector('.contactForm .wpcf7');
+    wpcf7Elm.addEventListener('wpcf7mailsent', function (event) {
+        $(this).hide();
+        $('#contactFormSuccess-contactPage').fadeIn(500);
+    }, false);
+
 
 });

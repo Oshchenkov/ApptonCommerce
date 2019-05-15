@@ -146,6 +146,9 @@ body {
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   font-size: 20px;
+  -webkit-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
 }
 
 .btnLink:hover, .btnLink:active, .btnLinkfocus {
@@ -578,7 +581,9 @@ body {
   height: auto;
 }
 
-body.upsell-page {
+body.upsell-page,
+body.page-id-28,
+body.page-id-42 {
   background-image: url("../images/uppsell-BG.svg");
 }
 
@@ -815,7 +820,9 @@ body.upsell-page {
   }
 }
 
-body.help {
+body.help,
+body.page-id-24,
+body.page-id-64 {
   background-image: url("../images/help-bg.svg");
 }
 
@@ -1208,6 +1215,95 @@ input:-webkit-autofill:active {
   color: #F36A7B;
   font-size: 20px;
   font-weight: bold;
+}
+
+body.contact-page,
+body.page-id-60 {
+  background-image: url(../images/contactBg.svg);
+}
+
+.contact-section {
+  margin: 60px 0;
+}
+
+.pageTitle {
+  font-size: 40px;
+  color: #51E3D4;
+  margin-bottom: 30px;
+}
+
+.contactForm__messageCount {
+  text-align: right;
+  color: #EFC130;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contactForm__submit {
+  text-align: right;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="namber"] {
+  border: none;
+  border-bottom: 2px solid #3B1274;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+  padding: 4px 0;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.contactForm input::-webkit-input-placeholder,
+.contactForm textarea::-webkit-input-placeholder {
+  color: #3B1274;
+}
+
+.contactForm textarea {
+  border: 2px solid #3B1274;
+  width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  height: 200px;
+}
+
+.contactForm input[type="submit"] {
+  width: initial;
+  font-size: 20px;
+  border: 1px solid #f6dd8f;
+  background-color: #faecbe;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 5px 50px;
+  outline: none;
+  -webkit-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  margin: 30px 0;
+}
+
+.contactForm input[type="submit"]:hover,
+.contactForm input[type="submit"]:active,
+.contactForm input[type="submit"]:focus {
+  background-color: #f3cf5f;
+}
+
+.contactInfo {
+  font-size: 20px;
+}
+
+.contactInfo__title {
+  margin-bottom: 30px;
+}
+
+.contactFormSuccess {
+  display: none;
+  font-size: 20px;
 }
 
 .mainFooter {
