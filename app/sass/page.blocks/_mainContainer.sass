@@ -129,7 +129,6 @@
 
 
 body.upsell-page,
-body.page-id-28,
 body.page-id-42
     background-image: url("../images/uppsell-BG.svg")    
 
@@ -321,7 +320,6 @@ body.page-id-42
 //----------------------------------------
 
 body.help,
-body.page-id-24,
 body.page-id-64
     background-image: url("../images/help-bg.svg")
 
@@ -662,3 +660,192 @@ body.page-id-60
 .contactFormSuccess
   display: none
   font-size: 20px
+
+//----------------------------------------
+// 				Careers page
+//----------------------------------------
+
+body.careers-page,
+body.page-id-56
+  background-image: url(../images/careersBG.svg)
+
+.contactInfo
+  &__p
+  &__link
+    display: inline-block
+    color: $color-purple
+    font-size: 18px
+    &:hover,
+    &:active,
+    &focus
+      color: $color-purple
+
+  
++media-breakpoint-up($lg)
+  .section-careersInfo .pageTitle
+    margin-bottom: 100px
+    margin-top: 30px
+  .contactInfo__link
+    margin-top: 30px
+    margin-bottom: 30px
+    font-size: 30px
+
+//----------------------------------------
+// 				About page
+//----------------------------------------
+body.about-page,
+body.page-id-54
+  background-image: url(../images/aboutBG.svg)
+
+.about-section
+  &__row
+  &__col
+
+.hugeLogo
+  &__img
+    width: 100%
+    max-width: 400px
+    margin: 30px auto
+
+.aboutContent
+  &__text
+    font-size: 16px
+    color: $color-purple
+  &__img
+    padding: 40px 60px
+    &Icon
+      background-color: #ccc
+
++media-breakpoint-up($lg)
+  .about-section
+    margin-top: 60px
+    margin-bottom: 60px
+
+//----------------------------------------
+// 				FAQ page
+//----------------------------------------
+body.faq-page,
+body.page-id-62
+  background-image: url(../images/careersBG.svg)
+
+.faq-section
+  margin-top: 60px
+  margin-bottom: 60px
+  &__item
+
+.collapseBlock
+  background-color: $color-whiteLight
+  box-shadow: $boxShadow-main
+  border-radius: $borderRadius-main
+  transition: $transitionAll
+  padding: 30px
+  margin-bottom: 20px
+  &__title
+    &-link
+      font-size: 30px
+      color: $color-purple
+      &:hover,
+      &:active,
+      &focus
+        color: lighten( $color-purple, 10%)
+  &__content
+    &-text
+      margin-top: 20px
+
+.collapseBlock.active .collapseBlock__title-link
+  font-weight: bold
+
+.collapseBlock__content
+  display: none
+  
++media-breakpoint-up($lg)
+  .faq-section
+    margin-top: 90px
+    margin-bottom: 90px
+    padding: 0 30px
+
++media-breakpoint-down($lg)
+  .collapseBlock__title-link
+    font-size: 20px
+  .collapseBlock__content-text
+    font-size: 16px
+
+//----------------------------------------
+// 				Article Post
+//----------------------------------------
+
+body.single
+  background: #fff
+
+.section-postHead
+  margin-bottom: 60px
+  margin-bottom: 60px
+  &__title
+    text-transform: uppercase
+    margin-bottom: 10px
+  &__author
+    color: $color-yellow
+  &__author
+    margin-bottom: 10px
+    &Name
+      color: $color-yellow
+      &:hover,
+      &:active,
+      &focus
+        color: $color-yellow
+  &__date
+    color: $color-yellow
+    margin-bottom: 10px
+    &:hover,
+    &:active,
+    &focus
+      color: $color-yellow
+
+.postSuggestions
+  border-top: 1px solid #F3ECD3
+  &__title
+    color: $color-purple
+    font-weight: bold
+    font-size: 20px
+    margin-top: 20px
+    margin-bottom: 20px
+    padding-left: 20px
+    padding-right: 20px
+
+.section-postContent
+  &__text
+    margin-bottom: 40px
+  &__img
+    margin-bottom: 40px
+    &Icon
+      width: 100%
+  
+.navLink
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 10px 0
+  margin-bottom: 10px
+  justify-content: flex-start
+  &__triangle
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 15px solid $color-yellow
+    width: 0
+    height: 0
+    display: inline-block
+    margin-right: 10px
+  &__text
+    color: $color-purple
+    font-weight: bold
+    font-size: 20px
+    display: inline-block
+
++media-breakpoint-down($lg)
+  .section-postHead
+    margin-top: 90px
+    margin-bottom: 90px
+  .section-postContent__text
+    margin-bottom: 30px
+  .section-postContent__img
+    margin-bottom: 30px
